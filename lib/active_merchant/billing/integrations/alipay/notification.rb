@@ -16,6 +16,10 @@ module ActiveMerchant #:nodoc:
             trade_status == 'WAIT_BUYER_PAY'
           end
 
+          def failed?
+            trade_status == 'TRADE_CLOSED'
+          end
+
           def status
             trade_status
           end
